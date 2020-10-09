@@ -3,10 +3,8 @@ import 'assets/css/components/atoms/SaveButton.css';
 
 const SaveButton:React.FC<{onClick: any}> = (onClick) => {
   return (
-    <button onClick={() => onClick}>
-      <div className='save-button'>
-        <p className='save-button__text'>Save</p>
-      </div>
+    <button onClick={() => onClick} className='save-button button'>
+      <p className='button__text text_color--white'>Save</p>
     </button>
   )
 };
