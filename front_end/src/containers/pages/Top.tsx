@@ -42,7 +42,7 @@ const Top: React.FC = ()=> {
     <div className='container'>
       <SideBar/>
         <div className='content'>
-          <h2 className='content-title'>Shoppingify allows you take your shopping list wherever you go</h2>
+          <h2 className='content-title'><span className='font--yellow'>Shoppingify</span> allows you take your shopping list wherever you go</h2>
           {
             categories.map((category: Category) => {
               return (
@@ -51,7 +51,9 @@ const Top: React.FC = ()=> {
             })
           }
         </div>
-      <AddItemForm />
+      <AddItemForm categories={categories.map((category: Category) => {
+        return category.name
+      })}/>
     </div>
   )
 };

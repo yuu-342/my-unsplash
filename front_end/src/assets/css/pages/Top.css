@@ -3,7 +3,7 @@
   src: url('../../fonts/Quicksand_Bold.otf');
 }
 .container {
-  position: relative;
+  display: flex;
   height: 100vh;
   width: 100vw;
   background-color: #FAFAFE;
@@ -11,10 +11,14 @@
 }
 
 .content {
-  margin: 0 20vw;
+  margin: 50px 20px;
 }
 
 .content-title {
   font-size: 26px;
   line-height: 32.5px;
+}
+
+.font--yellow {
+  color: #F9A109;
 }
