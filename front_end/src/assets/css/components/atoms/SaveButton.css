@@ -1,14 +1,15 @@
 .save-button {
   display: table-cell;
   vertical-align: middle;
-  width: 20px;
   height: 20px;
   background: #F9A109;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04);
   border-radius: 12px;
+  font-family: Quicksand;
 }
 
 .save-button__text {
+  margin: 10px 20px;
   text-align: center;
   font-family: Quicksand;
   font-style: normal;
