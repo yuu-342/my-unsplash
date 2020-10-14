@@ -32,16 +32,17 @@ type FormData = {
 
 type Category = string;
 
+type OnClickFunction = () => void
+
 interface Props {
   categories: Category[],
-  func: any
+  onClick: OnClickFunction
 }
 
-const AddItemFrom:React.FC<Props> = ({ categories, func }) => {
+const AddItemFrom:React.FC<Props> = ({ categories, onClick }) => {
   const classes = useStyles();
-  const { register, handleSubmit, setValue, control } = useForm<FormData>();
+  const { register, handleSubmit } = useForm<FormData>();
   const onSubmit = handleSubmit((data: FormData) => {
-    console.log(data)
     axios.post('http://localhost:3001/items', { items: data })
   });
 
@@ -69,13 +70,13 @@ const AddItemFrom:React.FC<Props> = ({ categories, func }) => {
         />
         <datalist id='categories'>
           {
-            categories.map((category: Category) => {
-              return <option value={category} />
+            categories.map((category: Category, index: number) => {
+              return <option value={category} key={index}/>
             })
           }
         </datalist>
         <div className='submit-form'>
-          <CancelButton onClick={func}/>
+          <CancelButton onClick={onClick}/>
           <SaveButton onClick={onSubmit} />
         </div>
       </form>
