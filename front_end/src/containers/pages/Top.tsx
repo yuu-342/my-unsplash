@@ -1,6 +1,6 @@
-import React, { useState, useEffect, DependencyList } from 'react';
+import React, { useState, useEffect, useCallback, DependencyList } from 'react';
 import SideBar from 'containers/organisms/SideBar';
-// import ShoppingList from 'containers/organisms/ShoppingList';
+import ShoppingList from 'containers/organisms/ShoppingList';
 import AddItemForm from 'containers/organisms/AddItemForm';
 import CategoryBox from 'containers/organisms/CategoryBox';
 import axios from 'axios';
@@ -32,11 +32,21 @@ function useEffectAsync(
 
 const Top: React.FC = ()=> {
   const [ categories, setCategories ] = useState([]);
+  const [ isAddItemForm, setIsItemForm] = useState(false);
 
   useEffectAsync(async () => {
     const res = await axios.get('http://localhost:3001/category')
     setCategories(res.data)
   }, [])
+
+  const handleShowItemForm = useCallback(() => {
+    setIsItemForm(true)
+  }, []);
+
+  const handleHiddenItemForm = useCallback(() => {
+    console.log('読んだ？')
+    setIsItemForm(false)
+  }, []);
 
   return (
     <div className='container'>
@@ -51,9 +61,10 @@ const Top: React.FC = ()=> {
             })
           }
         </div>
-      <AddItemForm categories={categories.map((category: Category) => {
-        return category.name
-      })}/>
+      {
+        isAddItemForm ? <AddItemForm categories={categories.map((category: Category) => { return category.name })} func={handleHiddenItemForm}/> : <ShoppingList func={handleShowItemForm}/>
+      }
+
     </div>
   )
 };
