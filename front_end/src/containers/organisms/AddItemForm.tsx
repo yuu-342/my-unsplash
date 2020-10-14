@@ -1,12 +1,11 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import axios from 'axios';
 import SaveButton from 'components/atoms/SaveButton';
 import CancelButton from 'components/atoms/CancelButton';
 import 'assets/css/containers/organisms/AddItemForm.css';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { TextField } from '@material-ui/core';
-import Autocomplete from '@material-ui/lab/Autocomplete';
 
 
 const useStyles = makeStyles((theme: Theme) =>

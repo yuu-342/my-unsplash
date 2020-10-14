@@ -44,7 +44,6 @@ const Top: React.FC = ()=> {
   }, []);
 
   const handleHiddenItemForm = useCallback(() => {
-    console.log('読んだ？')
     setIsItemForm(false)
   }, []);
 

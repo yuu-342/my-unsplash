@@ -2,7 +2,6 @@ class ItemsController < ApplicationController
   def create
     category = Category.find_or_initialize_by(name: item_params[:category])
     category.items.build(name: item_params[:name], note: item_params[:note], image_url: item_params[:image_url])
-    pp item_params
     category.save
 
   rescue => e
