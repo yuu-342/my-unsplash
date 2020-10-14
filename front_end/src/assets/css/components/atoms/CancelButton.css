@@ -1,0 +1,10 @@
+@import url('Button.css');
+
+.cancel-button {
+  -webkit-appearance: none;
+  background: #FFFFFF;
+}
+
+.text_color--black {
+  color: #000000;
+}

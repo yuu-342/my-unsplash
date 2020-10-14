@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Quicksand;
+  src: url('../../fonts/Quicksand_Bold.otf');
+}
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #FAFAFE;
+  font-family: Quicksand ;
+}
+
+.content {
+  margin: 50px 20px;
+}
+
+.content-title {
+  font-size: 26px;
+  line-height: 32.5px;
+}
+
+.font--yellow {
+  color: #F9A109;
+}

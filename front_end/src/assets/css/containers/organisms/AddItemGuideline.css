@@ -1,0 +1,25 @@
+.add-item-guideline {
+  display: flex;
+  background-color: #80485B;
+  border-radius: 1em;
+}
+
+.guideline__wrap {
+  margin: 10px 10px;
+}
+
+.guideline__text {
+  margin: 0 0 20px 0;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.bottle {
+  margin: -20px 10px 20px;
+  width: 30%;
+  transform: rotate(-10deg);
+}
