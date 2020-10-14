@@ -20,6 +20,8 @@ type Category = {
   items: Item[];
 }
 
+type OnClickFunction = () => void
+
 
 function useEffectAsync(
   effect: () => any,
@@ -39,11 +41,11 @@ const Top: React.FC = ()=> {
     setCategories(res.data)
   }, [])
 
-  const handleShowItemForm = useCallback(() => {
+  const handleShowItemForm: OnClickFunction = useCallback(() => {
     setIsItemForm(true)
   }, []);
 
-  const handleHiddenItemForm = useCallback(() => {
+  const handleHiddenItemForm: OnClickFunction = useCallback(() => {
     setIsItemForm(false)
   }, []);
 
@@ -61,9 +63,8 @@ const Top: React.FC = ()=> {
           }
         </div>
       {
-        isAddItemForm ? <AddItemForm categories={categories.map((category: Category) => { return category.name })} func={handleHiddenItemForm}/> : <ShoppingList func={handleShowItemForm}/>
+        isAddItemForm ? <AddItemForm categories={categories.map((category: Category) => { return category.name })} onClick={handleHiddenItemForm}/> : <ShoppingList onClick={handleShowItemForm}/>
       }
-
     </div>
   )
 };

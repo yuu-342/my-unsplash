@@ -1,9 +1,7 @@
 .shopping-list {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 80vh;
+  position: sticky;
   width: 25vw;
+  height: 80vh;
   background-color: #FFF0DE;
 }
 
