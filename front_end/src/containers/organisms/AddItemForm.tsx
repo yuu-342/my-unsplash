@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import SaveButton from 'components/atoms/SaveButton';
-import CancelButton from 'components/atoms/CancelButton';
+import SubmitOrCancelForm from 'components/molecules/SubmitOrCancelForm';
 import 'assets/css/containers/organisms/AddItemForm.css';
 import { useForm } from 'react-hook-form';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
@@ -75,10 +74,7 @@ const AddItemFrom:React.FC<Props> = ({ categories, onClick }) => {
             })
           }
         </datalist>
-        <div className='submit-form'>
-          <CancelButton onClick={onClick}/>
-          <SaveButton onClick={onSubmit} />
-        </div>
+        <SubmitOrCancelForm onClick={onClick} onSubmit={onSubmit}/>
       </form>
     </div>
   )

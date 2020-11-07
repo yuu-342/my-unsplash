@@ -11,7 +11,7 @@ interface Props {
 const AddItemGuideline:React.FC<Props> = ({ onClick }) => {
   return (
     <div className='add-item-guideline'>
-      <img src={Bottle} className='bottle'/>
+      <img src={Bottle} className='bottle' alt=""/>
       <div className='guideline__wrap'>
         <p className='guideline__text'>Didn't find what you need?</p>
         <AddItemButton onClick={onClick}/>

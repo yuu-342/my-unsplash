@@ -28,28 +28,3 @@ export type ShoppingListContextType = {
   shoppingList: Item[];
   setShoppingList: Dispatch<SetStateAction<Item[] | never[]>>
 }
-
-
-type ActionInterface<T extends string, U> = {
-  type: T;
-  value: U;
-}
-
-export type AllAction = ActionInterface<'addShoppingList', Item>
-  | ActionInterface<'removeShoppingList', never>
-  | ActionInterface<'setItem', Item | object>
-  | ActionInterface<'setItemList', ItemList[]>;
-
-export type ShoppingListSate = {
-  shoppingList: (Item | never)[];
-};
-
-export type ItemListState = {
-  itemList: ItemList[];
-};
-
-export type SelectItemState = {
-  selectItem: Item | object;
-}
-
-export type State = ShoppingListSate & ItemListState & SelectItemState
