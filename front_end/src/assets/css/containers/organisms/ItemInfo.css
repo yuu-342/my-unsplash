@@ -1,0 +1,20 @@
+.item-info {
+  position: sticky;
+  width: 25vw;
+  background: #ffffff;
+}
+
+.info__area {
+  margin: auto;
+  width: 80%;
+}
+
+.item__image {
+  margin-top: 3em;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.content__area {
+  margin: 3em 0;
+}

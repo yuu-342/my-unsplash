@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :category
+  belongs_to :shopping_list
 
   attribute :name, :string
   attribute :note, :string

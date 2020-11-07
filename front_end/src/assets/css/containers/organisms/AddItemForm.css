@@ -10,12 +10,6 @@
   height: 100%;
 }
 
-.submit-form {
-  margin: auto 0 40px 0 !important;
-  display: flex;
-  justify-content: space-around;
-}
-
 .form__title {
   margin-top: 30px !important;
 }
